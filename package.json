@@ -1,0 +1,10 @@
+{
+    "name": "ElectronTemplate",
+    "dependencies": {
+        "gulp": "*",
+        "electron-packager": "*",
+        "gulp-less": "*",
+        "gulp-run-electron": "*",
+        "electron-windows-installer": "*"
+    }
+}

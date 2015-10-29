@@ -1,0 +1,6 @@
+{
+    "name": "ElectronTemplate",
+    "dependencies": {
+        "font-awesome": "~4.4.0"
+    }
+}

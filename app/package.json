@@ -1,0 +1,9 @@
+{
+    "name": "ElectronTemplate",
+    "productName": "ElectronTemplate",
+    "version": "0.0.1",
+    "electronVersion": "0.34.1",
+    "main": "app.js",
+    "description": "Electron Template",
+    "authors": "kasoki"
+}

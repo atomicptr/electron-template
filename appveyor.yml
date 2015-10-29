@@ -1,0 +1,37 @@
+environment:
+    nodejs_version: "0.12"
+
+install:
+    - ps: Install-Product node $env:nodejs_version
+    - npm install
+    - npm install -g bower
+    - npm install -g gulp
+    - bower install
+
+build_script: gulp build
+after_build:
+    - gulp build-installer
+    - 7z a -r ElectronTemplate.zip %APPVEYOR_BUILD_FOLDER%\build\ElectronTemplate-win32-x64
+
+artifacts:
+    - path: installer/*.nupkg
+      name: nupkgs
+    - path: installer/RELEASES
+      name: release
+    - path: installer/ElectronTemplateSetup.exe
+      name: setup
+    - path: ElectronTemplate.zip
+      name: zip
+
+deploy:
+    provider: GitHub
+    auth_token:
+        secure: ADD_YOUR_ENCRYPTED_DEPLOY_KEY_HERE
+
+    artifact: nupkgs, release, setup, zip
+
+    description: "changelog coming soon..."
+    draft: true
+    prerelease: false
+    on:
+        appveyor_repo_tag: true
