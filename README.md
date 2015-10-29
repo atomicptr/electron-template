@@ -1,5 +1,7 @@
 # electron-template
 
+[![Build status](https://ci.appveyor.com/api/projects/status/9x2tyn72ukuphy4v?svg=true)](https://ci.appveyor.com/project/kasoki/electron-template)
+
 Template for writing Electron applications with support for continuous integration.
 
 ## Setup
